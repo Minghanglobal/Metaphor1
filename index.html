@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metaphors & Storytelling in Coaching</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .quiz {
+            margin-top: 20px;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .explanation {
+            display: none;
+            padding: 10px;
+            margin-top: 5px;
+            border-left: 5px solid #007bff;
+            background: #e7f1ff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Metaphors & Storytelling in Coaching</h1>
+
+    <div class="section">
+        <h2>Course Summary</h2>
+        <p>Marilyn Atkinson’s course focuses on the power of metaphors in communication, coaching, and self-discovery. She emphasizes that:</p>
+        <ul>
+            <li>Metaphors create meaning beyond literal words.</li>
+            <li>They shape our understanding of reality and self-perception.</li>
+            <li>Developing storytelling skills enhances coaching effectiveness.</li>
+            <li>Dreams and metaphors are deeply interconnected, influencing personal and professional growth.</li>
+        </ul>
+        <p>The course covers:</p>
+        <ul>
+            <li><strong>Storytelling as a Coaching Tool:</strong> How stories and metaphors connect deeply with clients.</li>
+            <li><strong>Personal Growth Through Metaphors:</strong> How metaphors help individuals develop a positive self-image.</li>
+            <li><strong>Dream Interpretation:</strong> How dreams serve as metaphoric representations of life experiences.</li>
+            <li><strong>Practical Exercises:</strong> Participants actively create and share stories.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Key Takeaways</h2>
+        <ul>
+            <li>Good storytelling is about *experiencing* rather than just *describing*.</li>
+            <li>Metaphors help us connect to deeper meanings and insights.</li>
+            <li>Using "you" in a story creates a stronger emotional connection.</li>
+            <li>We engage more when stories bring people into the present moment.</li>
+            <li>Trust and connection grow through shared human experiences.</li>
+        </ul>
+    </div>
+
+    <div class="section quiz">
+        <h2>Quiz Section</h2>
+
+        <div class="question">1. What is the primary purpose of using metaphors in coaching?</div>
+        <button class="btn" onclick="showExplanation(this, false)">A) To make conversations more entertaining</button>
+        <button class="btn" onclick="showExplanation(this, false)">B) To provide direct solutions to problems</button>
+        <button class="btn" onclick="showExplanation(this, true)">C) To help clients see their situations from a new perspective</button>
+        <button class="btn" onclick="showExplanation(this, false)">D) To avoid discussing difficult emotions</button>
+        <div class="explanation">📖 Explanation: Metaphors allow clients to shift their perspectives and discover insights that may not be obvious in a literal conversation.</div>
+
+        <div class="question">2. Why is storytelling an effective coaching tool?</div>
+        <button class="btn" onclick="showExplanation(this, false)">A) It distracts clients from their problems</button>
+        <button class="btn" onclick="showExplanation(this, true)">B) It helps people engage emotionally and think differently</button>
+        <button class="btn" onclick="showExplanation(this, false)">C) It makes the coaching session longer</button>
+        <button class="btn" onclick="showExplanation(this, false)">D) It replaces direct communication</button>
+        <div class="explanation">📖 Explanation: Storytelling helps clients emotionally engage and reflect on their experiences, making learning and transformation more impactful.</div>
+
+        <div class="question">3. What makes a metaphor effective in coaching?</div>
+        <button class="btn" onclick="showExplanation(this, false)">A) It must be complex and poetic</button>
+        <button class="btn" onclick="showExplanation(this, true)">B) It should be something the client can relate to</button>
+        <button class="btn" onclick="showExplanation(this, false)">C) It should have a clear and singular interpretation</button>
+        <button class="btn" onclick="showExplanation(this, false)">D) It should always be based on past experiences</button>
+        <div class="explanation">📖 Explanation: Effective metaphors resonate with the client’s experiences, making them relatable and meaningful.</div>
+
+    </div>
+
+    <script>
+        function showExplanation(button, isCorrect) {
+            let explanation = button.nextElementSibling;
+            while (explanation && !explanation.classList.contains("explanation")) {
+                explanation = explanation.nextElementSibling;
+            }
+            if (explanation) {
+                explanation.style.display = "block";
+                if (isCorrect) {
+                    alert("Correct! " + explanation.innerText);
+                } else {
+                    alert("Incorrect. " + explanation.innerText);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
